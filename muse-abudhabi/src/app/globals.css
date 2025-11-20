@@ -1,0 +1,26 @@
+/* src/app/globals.css */
+
+/* ✅ Tailwind v4 の正しい書き方：これ1行だけでOK */
+@import "tailwindcss";
+
+/* ここから下はお好みのカスタムCSS（Tailwindのディレクティブはもう書かない） */
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(56,189,248,0.18), transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(129,140,248,0.18), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(52,211,153,0.18), transparent 55%),
+    #020617; /* slate-950 相当 */
+  color: #e5e7eb; /* slate-200/300 相当 */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(94,234,212,0.35);
+}
