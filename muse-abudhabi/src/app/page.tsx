@@ -980,7 +980,7 @@ const SuccessModal: FC<SuccessModalProps> = ({
     : `.@muse_sol_jpのアブダビ渡航プロジェクトを支援して ${tier.nameJa} をMintしました！🇦🇪✈️ \n\n日本から世界へ!\n\n#MuseToAbuDhabi`;
   
   // サイトのURL (必要に応じて書き換えてください)
-  const siteUrl = "https://www.axis-protocol.xyz/"; 
+  const siteUrl = "https://www.letsgomuse.com/"; 
   
   const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(siteUrl)}`;
 
