@@ -12,6 +12,7 @@ import {
   Music2,
   Star,
   ExternalLink,
+  LayoutDashboard,
 } from "lucide-react";
 
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
@@ -250,21 +251,25 @@ const HeroSection: FC<LangProps> = ({ currentLanguage }) => {
         </p>
 
         <div className="flex flex-wrap items-center gap-3">
+          {/* メイン: Mintボタン */}
           <a
             href="#mint"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 via-indigo-500 to-fuchsia-500 px-4 py-2 text-xs font-semibold text-slate-950 shadow-soft transition hover:brightness-110"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 via-indigo-500 to-fuchsia-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-soft transition hover:brightness-110 hover:scale-105"
           >
             {isEn ? "Support the Journey" : "挑戦をサポートする"}
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
+
+          {/* セカンダリ: ダッシュボードボタン (ここを目立つ位置に追加) */}
           <a
-            href="#story"
-            className="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-emerald-300"
+            href="/dashboard"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-800/50 px-5 py-2.5 text-xs font-semibold text-slate-200 transition hover:bg-slate-800 hover:border-emerald-500/50 hover:text-emerald-400"
           >
-            {isEn ? "Read the story" : "ストーリーを読む"}
+          
+            <LayoutDashboard className="h-3.5 w-3.5" />
+            {isEn ? "Supporter Dashboard" : "サポーター用ダッシュボード"}
           </a>
         </div>
-
         <div className="flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
           <p>
             {isEn
@@ -294,6 +299,7 @@ const HeroSection: FC<LangProps> = ({ currentLanguage }) => {
           <ExternalLink className="h-3.5 w-3.5" />
           {isEn ? "Follow updates on X" : "Xで進捗を追う"}
         </a>
+        
       </motion.div>
 
       {/* Right card */}
